@@ -3,7 +3,7 @@ package se.nackademin.examination.examination_jacoco;
 import java.util.ArrayList;
 
 public class DataAnalysis {
-	
+	 
 	
 	public String buildFinalString(ArrayList<String> values){
 		String	resultString = "#####################-- ANALYSIS OF THE INPUT DATA --#####################\n";	
@@ -11,12 +11,13 @@ public class DataAnalysis {
 		resultString+="\n";
 		resultString += getResulStringHomecityAndAge(values);
 		
-		return resultString;
+		return resultString; 
 	}	
 	
 	
 	public String getResultStringNamesAndAge(ArrayList<String> values){
 		Game game = new Game();
+		System.out.println("dataanalyz "+values);
 		if (values.get(1).length()<=values.get(2).length() && game.getAgeFromInputValues(values)<=30){
 			return "The first name is smaller or equals in size to the last name and the participant is 30 or younger";
 		} if (values.get(1).length()>values.get(2).length() && game.getAgeFromInputValues(values)>30){
@@ -25,7 +26,7 @@ public class DataAnalysis {
 		
 		return "No analysis was performed";
 	}
-	
+ 	
 	public String getResulStringHomecityAndAge(ArrayList<String> values){
 		Game game = new Game();
 		if (values.get(5).length()<5){

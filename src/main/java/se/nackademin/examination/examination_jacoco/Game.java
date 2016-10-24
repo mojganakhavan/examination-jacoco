@@ -17,7 +17,7 @@ public class Game {
 	}
 	
 	
-	
+	/*
 	public ArrayList<String> collectInputData(){
 		ArrayList<String> resultArray = new ArrayList<String>();
 		Scanner scanner = new Scanner(System.in);
@@ -42,7 +42,7 @@ public class Game {
 		resultArray.add(inputValue);
 		
 		return resultArray;
-	}
+	}*/
 	
 	public char getGenderFromInputValues(ArrayList<String> arrayOfInputs){
 		char genderCharacter = arrayOfInputs.get(3).charAt(0);	
@@ -52,7 +52,8 @@ public class Game {
 	public int getAgeFromInputValues(ArrayList<String> arrayOfInputs){
 		int ageValue = Integer.parseInt(arrayOfInputs.get(4));	
 		return ageValue;
-	}
+		
+	} 
 	
 
 	public void runGame(String gameName, String firstName, String lastName, char gender, int age, String homeCity) {
@@ -144,4 +145,4 @@ public class Game {
 		System.out.println("it seems that you are a dedicated student and will be a great Software Tester Engineer!");
 
 	}
-}
+} 
